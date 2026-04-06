@@ -28,7 +28,7 @@ body{background:var(--bg);color:var(--body);font-family:var(--sans);font-size:16
 .contact-line{font-size:13px;color:var(--soft);font-weight:400}
 .contact-line a{color:var(--soft);text-decoration:none;border-bottom:1px solid var(--rule);transition:color .2s,border-color .2s}
 .contact-line a:hover{color:var(--ink);border-color:var(--ink)}
-section{padding:39px 0;border-bottom:1px solid var(--rule)}
+section{padding:47px 0}
 section:last-of-type{border-bottom:none}
 .section-label{font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2255BB;margin-bottom:20px;display:block}
 p{font-size:15.5px;color:var(--body);margin-bottom:14px;font-weight:400;line-height:1.75}
@@ -79,7 +79,7 @@ em{font-style:italic}
 .timm-body{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
 .timm-body.open{max-height:1200px;padding-top:16px}
 .credentials{font-size:13px;color:var(--mid);margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);line-height:1.8;font-weight:400}
-.case-studies-section{padding:48px 0;border-bottom:1px solid var(--rule)}
+.case-studies-section{padding:40px 0;background:#f0f0ee}
 .cs-section-head{padding:0 28px;max-width:1120px;margin:0 auto 28px}
 
 /* ── DESKTOP case study grid ── */
@@ -107,7 +107,7 @@ em{font-style:italic}
 
 @keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 .cs-expanded-inner{max-width:840px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px}
-.cs-expanded-col h4{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2255BB;margin-bottom:10px;margin-top:22px}
+.cs-expanded-col h4{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2255BB;margin-bottom:10px;margin-top:22px}
 .cs-expanded-col h4:first-child{margin-top:0}
 .cs-expanded-col p{font-size:14px;line-height:1.75;color:var(--body);font-weight:400;margin-bottom:10px}
 .cs-expanded-col p:last-child{margin-bottom:0}
@@ -122,9 +122,12 @@ em{font-style:italic}
 .cs-stats-note{font-size:12px;color:var(--soft);font-style:italic;margin-bottom:14px;line-height:1.6}
 .cs-witness p{font-size:13px;line-height:1.65;font-style:italic;color:var(--ink);margin-bottom:4px}
 .cs-witness span{font-size:11.5px;color:var(--soft)}
-.cs-card-ai{background:#e8ecf4;border-top:2px solid #c8d0e0;padding:14px 16px 16px;margin-top:16px;border-radius:3px}
-.cs-card-ai h4{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2255BB;margin-bottom:10px;margin-top:0}
-.cs-card-ai p{font-size:13px;line-height:1.72;color:var(--body);font-weight:400;margin-bottom:8px}
+.cs-card-ai{background:#3d4f8a;border-top:2px solid #2d3d6e;padding:14px 16px 16px;margin-top:16px;border-radius:3px;color:#fff}
+.cs-card-ai summary{list-style:none;cursor:pointer;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffffff;display:flex;align-items:center;justify-content:space-between}
+.cs-card-ai summary::-webkit-details-marker{display:none}
+.cs-card-ai summary::after{content:'+';font-size:16px;font-weight:300;letter-spacing:0;text-transform:none;flex-shrink:0;transition:transform .2s;line-height:1}
+.cs-card-ai[open] summary::after{transform:rotate(45deg)}
+.cs-card-ai p{font-size:13px;line-height:1.72;color:rgba(255,255,255,0.95);font-weight:400;margin-bottom:8px;margin-top:8px}
 .cs-card-ai p:last-child{margin-bottom:0}
 .cs-witness:last-child{margin-bottom:0}
 .cs-witness p{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--ink);margin-bottom:4px;line-height:1.6}
@@ -151,7 +154,7 @@ em{font-style:italic}
   .cs-expanded{display:none!important}
   .cs-mobile-expanded{display:block;max-height:0;overflow:hidden;background:var(--card);padding:0 20px;transition:max-height .45s ease,padding .3s ease}
   .cs-mobile-expanded.open{max-height:3000px;padding:24px 20px;border-top:1px solid var(--rule)}
-  .cs-mobile-expanded h4{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2255BB;margin-bottom:10px;margin-top:20px}
+  .cs-mobile-expanded h4{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2255BB;margin-bottom:10px;margin-top:20px}
   .cs-mobile-expanded h4:first-child{margin-top:0}
   .cs-mobile-expanded p{font-size:14px;line-height:1.75;color:var(--body);font-weight:400;margin-bottom:10px}
   .cs-mobile-expanded .cs-witness{border-left:2px solid var(--ink);padding-left:12px;margin-bottom:12px}
@@ -179,7 +182,7 @@ em{font-style:italic}
 .cs-carousel-dot.active{background:rgba(255,255,255,.95)}
 
 /* ── Profile block: unified header + why section ── */
-.profile-block{max-width:1120px;margin:0 auto;padding:0 28px;border-bottom:1px solid var(--rule)}
+.profile-block{max-width:1120px;margin:0 auto;padding:0 28px}
 .profile-header{padding:48px 0 32px;border-bottom:1px solid var(--rule)}
 .profile-why{padding:39px 0;max-width:760px}
 .profile-why .section-label{font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2255BB;margin-bottom:20px;display:block}
@@ -328,12 +331,12 @@ em{font-style:italic}
           <p class="cs-stats-note">DDO still in use after I left. Several function heads took it to their next organisations.</p>
           <h4>Impact Witness</h4>
           <div class="cs-witness"><p>"He not only delivers in spades but is widely acclaimed as a man who will do anything to help on any project."</p><span>Jack Cantwell — Global Client Partner, Dentsu Global</span></div>
-          <div class="cs-card-ai">
-            <h4>How I would do it today with AI</h4>
+          <details class="cs-card-ai">
+            <summary>How I would do it today with AI</summary>
             <p>The diagnosis took interviews, documents, workshops, then processing it all to find the real pattern. With AI, I could have fed in contracts, engagement data, and delivery records and surfaced the contradictions between stated workflows and actual behaviour in days. Processing it all faster. Same conclusion, far more evidence, fraction of the time.</p>
             <p>The approach would have looked different too. Instead of a fragmented picture across nine teams, AI could have powered a single source of truth visible to everyone, updated automatically. I could have linked Finance, and teams' APIs directly with client projects and create a historic of profitability, same as a live dashboard that reviews scope, time, and budget and other culture and change KPIs for each project creating alerts, insights and even recommendations when necessary — turning the whole approach into a consulting + SaaS.</p>
             <p>The human work still takes the time it takes. But I could have done it in half the time to better results.</p>
-          </div>
+          </details>
         </div>
       </div>
 
@@ -371,12 +374,12 @@ em{font-style:italic}
           <p class="cs-stats-note">Methodology adopted by Rainmaking for other clients and geographies — the approach outlasted the engagement.</p>
           <h4>Impact Witness</h4>
           <div class="cs-witness"><p>"I have been impressed by the quality of his work and the enthusiasm and structure with which complex problems were tackled and moved forward."</p><span>Quentin Vaquette — former Engie Factory MD</span></div>
-          <div class="cs-card-ai">
-            <h4>How I would have done it with AI</h4>
+          <details class="cs-card-ai">
+            <summary>How I would have done it with AI</summary>
             <p>Scouting would have run on agents — one per funnel, screening startups at volume while a separate layer synthesised internal intelligence with industry foresight to map opportunities in real time. Weeks of work becomes a continuously updated shortlist with reasoning attached.</p>
             <p>For Co-Pilot, AI changes the scale question. Business model simulation, live pilot instrumentation, and real-time A/B testing would have let us run one pilot per VP workstream — nine concurrent, partially automated.</p>
             <p>The bigger shift: instead of a methodology productised after the fact, an AI-driven Open Innovation Operating System from day one — one platform, fully instrumented, repeatable across clients and geographies without rebuilding each time.</p>
-          </div>
+          </details>
         </div>
       </div>
 
@@ -400,14 +403,14 @@ em{font-style:italic}
           <p class="cs-stats-note">The operating model held throughout. The infrastructure did not become the bottleneck as the program scaled.</p>
           <h4>Impact Witness</h4>
           <div class="cs-witness"><p>"A mastermind of change management. I've rarely seen a business so thoroughly improved in such a short time. I cannot think of a single person who was not impressed by the quality and the impact of his work."</p><span>Jose Campon — WPP China CEO · direct manager at Apple</span></div>
-          <div class="cs-card-ai">
-            <h4>How I would do it today with AI</h4>
+          <details class="cs-card-ai">
+            <summary>How I would do it today with AI</summary>
             <p>The operating model would have been built as a modular AI-driven platform from day one — structured around the actual scaling logic: countries × business lines × products. Every new combination inherits the existing framework. No rebuilding as you grow.</p>
             <p>Onboarding and knowledge automated and adaptive — specific to team, country, and function. Not replacing the human-to-human experience but raising the quality of it.</p>
             <p>The bigger shift is how the work itself would have been designed. Not AI retrofitted onto existing workflows — but ways of working redesigned from scratch as human-AI workflows, bespoke to each function and context. AI handling the operational load, humans owning judgment and relationships. A different operating model, not just a faster one.</p>
             <p>The platform wouldn't just process work — it would surface proactive recommendations, flag drift, and synthesise signals across 40 countries that no small team could monitor manually.</p>
             <p>The result: instead of operational work consuming everything, the team would have had the capacity to operate at a fundamentally higher level.</p>
-          </div>
+          </details>
         </div>
       </div>
 
@@ -428,12 +431,12 @@ em{font-style:italic}
             <p class="cs-stats-note">DDO still in use after I left. Several function heads took it to their next organisations.</p>
             <h4>Impact Witness</h4>
             <div class="cs-witness"><p>"He not only delivers in spades but is widely acclaimed as a man who will do anything to help on any project if it will help you or the business."</p><span>Jack Cantwell — Global Client Partner, Dentsu Global</span></div>
-            <div class="cs-card-ai">
-              <h4>How I would do it today with AI</h4>
+            <details class="cs-card-ai">
+              <summary>How I would do it today with AI</summary>
               <p>The diagnosis took interviews, documents, workshops, then processing it all to find the real pattern. With AI, I could have fed in contracts, engagement data, and delivery records and surfaced the contradictions between stated workflows and actual behaviour in days. Processing it all faster. Same conclusion, far more evidence, fraction of the time.</p>
               <p>The approach would have looked different too. Instead of a fragmented picture across nine teams, AI could have powered a single source of truth visible to everyone, updated automatically. I could have linked Finance, and teams' APIs directly with client projects and create a historic of profitability, same as a live dashboard that reviews scope, time, and budget and other culture and change KPIs for each project creating alerts, insights and even recommendations when necessary — turning the whole approach into a consulting + SaaS.</p>
               <p>The human work still takes the time it takes. But I could have done it in half the time to better results.</p>
-            </div>
+            </details>
           </div>
         </div>
       </div>
@@ -456,12 +459,12 @@ em{font-style:italic}
             <p class="cs-stats-note">Pilot ID and Co-Pilot adopted by Rainmaking for other clients and geographies — the methodology outlasted the engagement.</p>
             <h4>Impact Witness</h4>
             <div class="cs-witness"><p>"I have been impressed by the quality of his work and the enthusiasm and structure with which complex problems were tackled and moved forward."</p><span>Quentin Vaquette — former Engie Factory MD</span></div>
-            <div class="cs-card-ai">
-              <h4>How I would have done it with AI</h4>
+            <details class="cs-card-ai">
+              <summary>How I would have done it with AI</summary>
               <p>Scouting would have run on agents — one per funnel, screening startups at volume while a separate layer synthesised internal intelligence with industry foresight to map opportunities in real time. Weeks of work becomes a continuously updated shortlist with reasoning attached.</p>
               <p>For Co-Pilot, AI changes the scale question. Business model simulation, live pilot instrumentation, and real-time A/B testing would have let us run one pilot per VP workstream — nine concurrent, partially automated.</p>
               <p>The bigger shift: instead of a methodology productised after the fact, an AI-driven Open Innovation Operating System from day one — one platform, fully instrumented, repeatable across clients and geographies without rebuilding each time.</p>
-            </div>
+            </details>
           </div>
         </div>
       </div>
@@ -482,14 +485,14 @@ em{font-style:italic}
             <p class="cs-stats-note">The operating model and measurement framework held throughout. The infrastructure did not become the bottleneck as the program scaled.</p>
             <h4>Impact Witness</h4>
             <div class="cs-witness"><p>"A mastermind of change management. I've rarely seen a business so thoroughly improved in such a short time. I cannot think of a single person who was not impressed by the quality and the impact of his work."</p><span>Jose Campon — WPP China CEO · direct manager at Apple</span></div>
-            <div class="cs-card-ai">
-              <h4>How I would do it today with AI</h4>
+            <details class="cs-card-ai">
+              <summary>How I would do it today with AI</summary>
               <p>The operating model would have been built as a modular AI-driven platform from day one — structured around the actual scaling logic: countries × business lines × products. Every new combination inherits the existing framework. No rebuilding as you grow.</p>
               <p>Onboarding and knowledge automated and adaptive — specific to team, country, and function. Not replacing the human-to-human experience but raising the quality of it.</p>
               <p>The bigger shift is how the work itself would have been designed. Not AI retrofitted onto existing workflows — but ways of working redesigned from scratch as human-AI workflows, bespoke to each function and context. AI handling the operational load, humans owning judgment and relationships. A different operating model, not just a faster one.</p>
               <p>The platform wouldn't just process work — it would surface proactive recommendations, flag drift, and synthesise signals across 40 countries that no small team could monitor manually.</p>
               <p>The result: instead of operational work consuming everything, the team would have had the capacity to operate at a fundamentally higher level.</p>
-            </div>
+            </details>
           </div>
         </div>
       </div>
