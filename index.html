@@ -241,13 +241,13 @@ em{font-style:italic}
 .constellation-inner{max-width:1120px;margin:0 auto;padding:0 28px}
 .constellation-section .section-label{color:#ffffff;margin-bottom:20px}
 .const-intro{font-size:15px;color:rgba(232,236,245,0.85);font-weight:300;line-height:1.75;margin-bottom:16px;max-width:580px}
-.constellation-field{position:relative;width:100%;aspect-ratio:2.2/1;min-height:160px;max-height:200px;margin-bottom:32px}
+.constellation-field{position:relative;width:100%;aspect-ratio:2.2/1;min-height:104px;max-height:130px;margin-bottom:32px;cursor:crosshair}
 /* Star tiers */
-.star{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(232,121,58,0.22);transition:all 0.8s cubic-bezier(0.22,1,0.36,1);cursor:default;z-index:2}
-.star.ember{width:7px;height:7px;background:rgba(232,121,58,0.55);box-shadow:none}
+.star{position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(232,121,58,0.45);transition:all 0.8s cubic-bezier(0.22,1,0.36,1);cursor:default;z-index:2}
+.star.ember{width:8px;height:8px;background:rgba(232,121,58,0.45);box-shadow:none}
 .star.lit{width:10px;height:10px;background:rgba(232,121,58,0.8);box-shadow:0 0 8px rgba(232,121,58,0.35)}
-.star.lit-warm{width:10px;height:10px;background:rgba(232,121,58,0.8);box-shadow:0 0 8px rgba(232,121,58,0.35)}
-.star.lit-all{width:13px;height:13px;background:#E8793A;box-shadow:0 0 14px rgba(232,121,58,0.6),0 0 28px rgba(232,121,58,0.2)}
+.star.lit-warm{width:15px;height:15px;background:rgba(232,121,58,0.88);box-shadow:0 0 12px rgba(232,121,58,0.5),0 0 24px rgba(232,121,58,0.2)}
+.star.lit-all{width:21px;height:21px;background:#E8793A;box-shadow:0 0 20px rgba(232,121,58,0.7),0 0 42px rgba(232,121,58,0.3)}
 .star-tip{display:none;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#111827;border:1px solid rgba(180,210,255,0.1);color:#e8eaed;font-size:11px;font-weight:400;white-space:nowrap;padding:6px 10px;border-radius:4px;pointer-events:none;z-index:20;line-height:1.4}
 .star-tip .tip-name{font-weight:500;display:block}
 .star-tip .tip-title{display:block;color:rgba(180,210,255,0.7);font-size:10.5px;margin-top:1px}
@@ -260,25 +260,28 @@ em{font-style:italic}
 .pattern-col{flex:1;display:flex;flex-direction:column;border-right:1px solid rgba(232,236,245,0.08)}
 .pattern-col:last-of-type{border-right:none}
 .pattern-btn{background:none;border:none;border-bottom:1px solid rgba(232,236,245,0.08);padding:16px 12px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--sans);transition:all 0.3s;-webkit-tap-highlight-color:transparent;width:100%}
-.pattern-btn .p-name{font-family:var(--serif);font-size:15px;font-weight:400;font-style:italic;color:rgba(232,236,245,0.85);transition:color 0.3s}
+.pattern-btn .p-name{font-family:var(--serif);font-size:18px;font-weight:700;font-style:normal;color:rgba(232,236,245,0.85);transition:color 0.3s}
 .pattern-btn .p-arrow{width:18px;height:18px;border:1px solid rgba(232,236,245,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(232,236,245,0.25);transition:all 0.3s;flex-shrink:0;line-height:1}
 .pattern-btn.active .p-arrow{border-color:rgba(232,121,58,0.5);color:#E8793A;transform:rotate(45deg)}
 .pattern-detail{max-height:0;overflow:hidden;transition:max-height 0.5s ease,padding 0.3s ease}
 .pattern-detail.open{max-height:500px;padding:16px 12px 12px}
 .pattern-desc{font-size:15px;color:rgba(232,236,245,0.85);font-weight:300;line-height:1.75;margin-bottom:14px}
-.const-hint{font-family:var(--sans);font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.75);text-align:left;margin-bottom:4px;opacity:1}
-.const-subhint{font-family:var(--sans);font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.75);text-align:left;margin-top:4px;margin-bottom:16px}
+.pattern-btn:hover{background:rgba(232,121,58,0.05)}
+/* Star tap wrapper */
+.star-wrap{position:absolute;min-width:24px;min-height:24px;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);z-index:2}
+.star{position:relative;flex-shrink:0}
 @media(max-width:640px){
-  .constellation-field{aspect-ratio:1.6/1;min-height:200px}
+  .constellation-field{aspect-ratio:unset;min-height:120px;max-height:140px}
   .pattern-selector{flex-direction:column}
-  .pattern-col{border-right:none;border-bottom:1px solid rgba(232,236,245,0.08)}
+  .pattern-col{border-right:none;border-bottom:1px solid rgba(232,236,245,0.08);width:100%}
   .pattern-col:last-of-type{border-bottom:none}
-  .pattern-btn{flex-direction:row;justify-content:space-between;text-align:left;padding:14px 0}
-  .pattern-btn .p-name{font-size:13.5px;text-align:left}
+  .pattern-btn{flex-direction:row;justify-content:space-between;text-align:left;padding:0 0;min-height:44px;align-items:center}
+  .pattern-btn .p-name{font-size:17px;text-align:left}
+  .pattern-detail{width:100%}
   .pattern-detail.open{padding:12px 0}
   .star.lit{width:8px;height:8px}
-  .star.lit-warm{width:8px;height:8px}
-  .star.lit-all{width:11px;height:11px}
+  .star.lit-warm{width:12px;height:12px}
+  .star.lit-all{width:17px;height:17px}
 }
 </style>
 </head>
@@ -664,8 +667,6 @@ em{font-style:italic}
 
   <p class="const-intro">Three patterns emerge independently across 20 professional references spanning 10+ years — from CEOs and direct reports. 4 countries · 6 industries · 5 organisations · zero hedging or qualification in any reference.</p>
 
-  <p class="const-hint">Select a skill to see the pattern</p>
-  <p class="const-subhint">Hover over each of the stars to see the people behind the claim</p>
   <div class="constellation-field" id="constellation"></div>
 
   <div class="pattern-selector">
@@ -823,12 +824,20 @@ function carouselSet(c, idx) {
     {id:'owens',name:'Stu Owens',title:'VP APAC Operations, WPP Media',org:'WPP APAC',city:'Singapore',patterns:['lasting','elevate']},
     {id:'landaluce',name:'Estefania Landaluce',title:'Strategy / Service Design / Research',org:'Collaborator',city:'Spain',patterns:['elevate']}
   ];
-  var positions=[
-    {x:12,y:18},{x:28,y:11},{x:45,y:6},{x:62,y:14},{x:78,y:8},
-    {x:8,y:44},{x:22,y:37},{x:38,y:32},{x:55,y:38},{x:72,y:29},
-    {x:88,y:35},{x:15,y:63},{x:32,y:57},{x:48,y:61},{x:65,y:52},
-    {x:82,y:59},{x:92,y:48},{x:5,y:74},{x:42,y:76},{x:70,y:71}
+  var positionsDesktop=[
+    {x:12,y:12},{x:28,y:7},{x:45,y:4},{x:62,y:9},{x:78,y:5},
+    {x:8,y:29},{x:22,y:24},{x:38,y:21},{x:55,y:25},{x:72,y:19},
+    {x:88,y:23},{x:15,y:41},{x:32,y:37},{x:48,y:40},{x:65,y:34},
+    {x:82,y:38},{x:92,y:31},{x:5,y:48},{x:42,y:49},{x:70,y:46}
   ];
+  var positionsMobile=[
+    {x:12,y:10},{x:28,y:6},{x:45,y:3},{x:62,y:7},{x:78,y:4},
+    {x:8,y:24},{x:22,y:20},{x:38,y:17},{x:55,y:21},{x:72,y:16},
+    {x:88,y:19},{x:15,y:34},{x:32,y:31},{x:48,y:33},{x:65,y:28},
+    {x:82,y:32},{x:92,y:26},{x:5,y:40},{x:42,y:41},{x:70,y:38}
+  ];
+  var isMobile=window.matchMedia('(max-width:640px)').matches;
+  var positions=isMobile?positionsMobile:positionsDesktop;
   var field=document.getElementById('constellation');
   if(!field)return;
   for(var i=0;i<35;i++){
@@ -840,17 +849,20 @@ function carouselSet(c, idx) {
     field.appendChild(d);
   }
   referees.forEach(function(ref,i){
+    var wrap=document.createElement('div');
+    wrap.className='star-wrap';
+    wrap.style.left=positions[i].x+'%';
+    wrap.style.top=positions[i].y+'%';
     var s=document.createElement('div');
     s.className='star';
     s.dataset.patterns=ref.patterns.join(',');
     s.dataset.totalPatterns=ref.patterns.length;
-    s.style.left=positions[i].x+'%';
-    s.style.top=positions[i].y+'%';
     var t=document.createElement('div');
     t.className='star-tip';
     t.innerHTML='<span class="tip-name">'+ref.name+'</span><span class="tip-title">'+ref.title+'</span><span class="tip-org">'+ref.org+' \xb7 '+ref.city+'</span>';
     s.appendChild(t);
-    field.appendChild(s);
+    wrap.appendChild(s);
+    field.appendChild(wrap);
   });
   function lightStars(pattern){
     document.querySelectorAll('.star').forEach(function(star){
@@ -859,7 +871,8 @@ function carouselSet(c, idx) {
       var isLit=pats.indexOf(pattern)>-1;
       star.classList.remove('lit','lit-warm','lit-all','ember');
       if(isLit&&total===3){star.classList.add('lit-all');}
-      else if(isLit&&total>=1){star.classList.add('lit');}
+      else if(isLit&&total===2){star.classList.add('lit-warm');}
+      else if(isLit&&total===1){star.classList.add('lit');}
       else if(!isLit&&total>=2){star.classList.add('ember');}
     });
   }
