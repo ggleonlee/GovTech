@@ -267,11 +267,17 @@ em{font-style:italic}
 .pattern-detail.open{max-height:500px;padding:16px 12px 12px}
 .pattern-desc{font-size:15px;color:rgba(232,236,245,0.85);font-weight:300;line-height:1.75;margin-bottom:14px}
 .pattern-btn:hover{background:rgba(232,121,58,0.05)}
+.pattern-refs{margin-top:12px}
+.pattern-refs summary{list-style:none;cursor:pointer;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,121,58,0.7);padding:6px 0}
+.pattern-refs summary::-webkit-details-marker{display:none}
+.pattern-refs-body .quote-item{border-left:1px solid rgba(232,121,58,0.3);padding-left:10px;margin-bottom:10px}
+.pattern-refs-body .quote-text{font-family:var(--serif);font-size:12.5px;font-style:italic;color:rgba(232,236,245,0.75);line-height:1.6;margin-bottom:3px}
+.pattern-refs-body .quote-attr{font-size:11px;color:rgba(232,236,245,0.45)}
 /* Star tap wrapper */
 .star-wrap{position:absolute;min-width:24px;min-height:24px;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);z-index:2}
 .star{position:relative;flex-shrink:0}
 @media(max-width:640px){
-  .constellation-field{aspect-ratio:unset;min-height:120px;max-height:140px}
+  .constellation-field{aspect-ratio:unset;min-height:162px;max-height:189px}
   .pattern-selector{flex-direction:column}
   .pattern-col{border-right:none;border-bottom:1px solid rgba(232,236,245,0.08);width:100%}
   .pattern-col:last-of-type{border-bottom:none}
@@ -311,38 +317,6 @@ em{font-style:italic}
       <p>I have built programs from first principles before. I know what it takes to earn trust inside complex institutions fast, to work across design, product, and engineering teams without sitting above any of them, and to leave agencies more capable than when I arrived. I am also writing a book — half philosophy, half tactical playbook — called <em>Futures Worth Following</em>, about leading change with integrity in conditions of growing complexity and uncertainty.</p>
       <p>Singapore is home and a place we care about. Both my sons were born here and the public sector transformation work this team is doing matters to me directly — because when change doesn't stick inside a government agency, better futures don't materialise and citizens bear the cost.</p>
 
-      <p><strong>Over 30 references spanning 10+ years across 6 industries and 4 countries point independently to these 3:</strong></p>
-      <div class="pattern-item">
-        <button class="pattern-trigger" onclick="togglePattern(this)">
-          <span class="pattern-label">That I diagnose faster than expected, even in new problem spaces</span>
-          <span class="pattern-icon">+</span>
-        </button>
-        <div class="pattern-body">
-          <div class="quote-item"><p class="quote-text">"It became apparent quite quickly that he was the go-to-guy to understand how things actually got done. It shocked me when I learned he had only been in for 6 months."</p><span class="quote-attr">Matthew Schone — former CPO, Dentsu APAC</span></div>
-          <div class="quote-item"><p class="quote-text">"He was able to parachute into a very complex project in a totally new industry and immediately structure approaches to solving our key challenges."</p><span class="quote-attr">Colin Allison — Program Lead, Rainmaking</span></div>
-        </div>
-      </div>
-      <div class="pattern-item">
-        <button class="pattern-trigger" onclick="togglePattern(this)">
-          <span class="pattern-label">That I create lasting impact</span>
-          <span class="pattern-icon">+</span>
-        </button>
-        <div class="pattern-body">
-          <div class="quote-item"><p class="quote-text">"To this day there are processes and improvements he introduced that are still impactful on how we work at iProspect/Dentsu."</p><span class="quote-attr">Nader Ezzat — Strategic Project Management Expert, Dentsu</span></div>
-          <div class="quote-item"><p class="quote-text">"He was able to introduce process improvements that have since elevated and strengthened the way that we run our various projects."</p><span class="quote-attr">Rachel Tan — Strategic Operator, Rainmaking</span></div>
-        </div>
-      </div>
-      <div class="pattern-item">
-        <button class="pattern-trigger" onclick="togglePattern(this)">
-          <span class="pattern-label">That I earn trust fast and elevate the people around me</span>
-          <span class="pattern-icon">+</span>
-        </button>
-        <div class="pattern-body">
-          <div class="quote-item"><p class="quote-text">"His MO is to support, guide and inspire the people that he works with — he is the embodiment of a team player."</p><span class="quote-attr">Samuel Hall — CEO, Rainmaking</span></div>
-          <div class="quote-item"><p class="quote-text">"He truly cares about his team and spends invaluable time teaching and growing team members around him."</p><span class="quote-attr">Virginie Hello — COO, Rainmaking</span></div>
-          <div class="quote-item"><p class="quote-text">"We are building a new Master's in Complex Problem Solving and I want him teaching as many people as possible. The way he frames complex experiences and processes — didactically, human, precise — builds better professionals."</p><span class="quote-attr">Ramon Aller — COO, Singular Solving</span></div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -677,6 +651,13 @@ em{font-style:italic}
       </button>
       <div class="pattern-detail" id="detail-diagnose">
         <p class="pattern-desc">Enters unfamiliar industries — energy, big tech, government — and reads the real problem within weeks. Referees independently express surprise at the speed. This pattern appears across every organisation and every seniority level in the dataset.</p>
+        <details class="pattern-refs">
+          <summary>But don't just take it from me +</summary>
+          <div class="pattern-refs-body">
+            <div class="quote-item"><p class="quote-text">"It became apparent quite quickly that he was the go-to-guy to understand how things actually got done. It shocked me when I learned he had only been in for 6 months."</p><span class="quote-attr">Matthew Schone — former CPO, Dentsu APAC</span></div>
+            <div class="quote-item"><p class="quote-text">"He was able to parachute into a very complex project in a totally new industry and immediately structure approaches to solving our key challenges."</p><span class="quote-attr">Colin Allison — Program Lead, Rainmaking</span></div>
+          </div>
+        </details>
       </div>
     </div>
     <div class="pattern-col">
@@ -686,6 +667,13 @@ em{font-style:italic}
       </button>
       <div class="pattern-detail" id="detail-lasting">
         <p class="pattern-desc">Not "delivered projects" — lasting. Processes introduced at Dentsu are still in use years after departure. Programs built at Rainmaking scaled to other clients. Systems designed at Apple supported a 10× budget expansion. The work survived the person leaving.</p>
+        <details class="pattern-refs">
+          <summary>But don't just take it from me +</summary>
+          <div class="pattern-refs-body">
+            <div class="quote-item"><p class="quote-text">"To this day there are processes and improvements he introduced that are still impactful on how we work at iProspect/Dentsu."</p><span class="quote-attr">Nader Ezzat — Strategic Project Management Expert, Dentsu</span></div>
+            <div class="quote-item"><p class="quote-text">"He was able to introduce process improvements that have since elevated and strengthened the way that we run our various projects."</p><span class="quote-attr">Rachel Tan — Strategic Operator, Rainmaking</span></div>
+          </div>
+        </details>
       </div>
     </div>
     <div class="pattern-col">
@@ -695,6 +683,14 @@ em{font-style:italic}
       </button>
       <div class="pattern-detail" id="detail-elevate">
         <p class="pattern-desc">The highest-frequency signal. Not a side effect of competence but described as a primary capability — the mechanism through which results are produced. Direct reports credit specific growth. Peers describe feeling supported. Executives note cultural uplift.</p>
+        <details class="pattern-refs">
+          <summary>But don't just take it from me +</summary>
+          <div class="pattern-refs-body">
+            <div class="quote-item"><p class="quote-text">"His MO is to support, guide and inspire the people that he works with — he is the embodiment of a team player."</p><span class="quote-attr">Samuel Hall — CEO, Rainmaking</span></div>
+            <div class="quote-item"><p class="quote-text">"He truly cares about his team and spends invaluable time teaching and growing team members around him."</p><span class="quote-attr">Virginie Hello — COO, Rainmaking</span></div>
+            <div class="quote-item"><p class="quote-text">"We are building a new Master's in Complex Problem Solving and I want him teaching as many people as possible. The way he frames complex experiences and processes — didactically, human, precise — builds better professionals."</p><span class="quote-attr">Ramon Aller — COO, Singular Solving</span></div>
+          </div>
+        </details>
       </div>
     </div>
   </div>
