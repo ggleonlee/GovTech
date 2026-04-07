@@ -195,24 +195,28 @@ em{font-style:italic}
 .cs-carousel-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;border:none;padding:0;transition:background .2s}
 .cs-carousel-dot.active{background:rgba(255,255,255,.95)}
 
-/* ── Profile block: unified header + why section ── */
-.profile-block{max-width:1120px;margin:0 auto;padding:0 28px}
-.profile-header{padding:48px 0 32px;border-bottom:1px solid var(--rule)}
-.profile-why{padding:39px 0;max-width:760px}
-.profile-why .section-label{font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#E8793A;margin-bottom:20px;display:block}
-.profile-pull{font-family:var(--serif);font-size:18px;font-style:italic;font-weight:400;color:var(--ink);border-left:2px solid #E8793A;padding-left:16px;margin:24px 0}
+/* ── Profile block: hero header ── */
+.profile-block{background:#071830;color:#ffffff;width:100%;margin:0;padding:0}
+.profile-why{max-width:720px;margin:0 auto;padding:80px 24px 64px;text-align:center}
+.profile-pill{display:inline-block;color:rgba(255,255,255,0.55);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:0;margin-bottom:20px}
+.profile-headline{font-family:var(--sans);font-size:clamp(36px,7vw,72px);font-weight:600;letter-spacing:-0.02em;color:#ffffff;line-height:1.1;margin-bottom:28px;white-space:nowrap;display:block;width:100vw;position:relative;left:50%;transform:translateX(-50%);text-align:center}
+.profile-lead{font-family:var(--sans);font-size:17px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.75;max-width:580px;margin:0 auto 16px}
+.profile-lead--strong{color:rgba(255,255,255,0.95);font-weight:400}
+.profile-why .read-more-body{max-width:580px;margin:0 auto;text-align:left}
+.profile-why .read-more-body p{color:rgba(255,255,255,0.7);font-size:16px}
+.profile-why strong{color:#ffffff}
 
 /* ── Mobile ── */
 @media(max-width:680px){
   #why,#cases,#experience,#references,#credentials{scroll-margin-top:68px}
   .page-wide{padding:0 24px}
   .section-wrap{padding:0 24px}
-  .profile-block{padding:0}
-  .profile-header{padding:24px 16px 20px}
+  .profile-why{padding:48px 24px 40px}
+  .profile-headline{white-space:normal;width:auto;position:static;left:auto;transform:none;font-size:clamp(28px,9vw,40px)}
+  .profile-lead{font-size:15px}
+  .profile-why .read-more-body p{font-size:15px}
   .contact-line{font-size:12px;flex-wrap:wrap;gap:4px 0}
-  .profile-why{padding:24px 16px}
   .section-label{font-size:14px;margin-bottom:16px}
-  .profile-why p{font-size:16px}
   .pattern-trigger{padding:14px 16px 14px 0}
   .read-more-trigger{font-size:13px;min-height:44px}
   .expand-trigger{min-height:44px}
@@ -243,8 +247,8 @@ em{font-style:italic}
 .cred-body{background:var(--card);border-radius:6px;padding:20px 24px;font-size:14px;line-height:2}
 
 /* ── Read more toggle ── */
-.read-more-trigger{background:none;border:none;padding:0;font-family:var(--sans);font-size:14px;color:var(--soft);cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin-top:8px;touch-action:manipulation;transition:color .2s}
-.read-more-trigger:hover{color:var(--ink)}
+.read-more-trigger{background:none;border:none;padding:0;font-family:var(--sans);font-size:14px;color:rgba(255,255,255,0.45);cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin-top:24px;touch-action:manipulation;transition:color .2s}
+.read-more-trigger:hover{color:rgba(255,255,255,0.75)}
 .read-more-icon{font-size:16px;line-height:1;transition:transform .25s}
 .read-more-trigger.open .read-more-icon{transform:rotate(45deg)}
 .read-more-body{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s ease}
@@ -320,17 +324,17 @@ em{font-style:italic}
 
 <div class="profile-block fade-in visible" id="why">
   <div class="profile-why">
-    <div class="section-label">Change &amp; Transformation Lead — Why I'm Applying</div>
-
-    <p>The work your team is set up to do — embedding inside agencies, diagnosing what is actually blocking modernisation, and building the conditions for change to last — is precisely what I have spent the last ten years doing.</p>
-    <blockquote class="profile-pull">Not as a consultant who delivers recommendations and leaves, but as someone who stays until the system can run without me.</blockquote>
+    <div class="profile-pill">Change &amp; Transformation Lead</div>
+    <h1 class="profile-headline">Why I want to be part of it.</h1>
+    <p class="profile-lead">Embedding inside agencies, diagnosing what is actually blocking modernisation, and building the conditions for change to last — is what I have spent the last ten years doing.</p>
+    <p class="profile-lead profile-lead--strong">Not as a consultant who delivers recommendations and leaves, but as someone who stays until the system can run without me.</p>
 
     <button class="read-more-trigger" onclick="toggleReadMore(this)">Read more <span class="read-more-icon">+</span></button>
 
     <div class="read-more-body">
-      <p>For a team being built from the ground up, I can also act as a coach and internal leader — gradually widening the scope and complexity of problems our teammates or agency teams can take on independently, so the team's collective capability grows with every engagement.</p>
-      <p>I have built programs from first principles before. I know what it takes to earn trust inside complex institutions fast, to work across design, product, and engineering teams without sitting above any of them, and to leave agencies more capable than when I arrived. I am also writing a book — half philosophy, half tactical playbook — called <em>Futures Worth Following</em>, about leading change with integrity in conditions of growing complexity and uncertainty.</p>
-      <p>Singapore is home and a place we care about. Both my sons were born here and the public sector transformation work this team is doing matters to me directly — because when change doesn't stick inside a government agency, better futures don't materialise and citizens bear the cost.</p>
+      <p>For a team being built from the ground up, <strong>I can also act as a coach and internal leader</strong> — gradually widening the scope and complexity of problems our teammates or agency teams can take on independently, so the team's collective capability grows with every engagement.</p>
+      <p>I have built programs from first principles before. <strong>I know what it takes to earn trust inside complex institutions fast</strong>, to work across design, product, and engineering teams without sitting above any of them, and to leave agencies more capable than when I arrived. I am also writing a book — half philosophy, half tactical playbook — called <em>Futures Worth Following</em>, about leading change with integrity in conditions of growing complexity and uncertainty.</p>
+      <p><strong>Singapore is home and a place we care about.</strong> Both my sons were born here and the public sector transformation work this team is doing matters to me directly — because when change doesn't stick inside a government agency, better futures don't materialise and citizens bear the cost.</p>
 
     </div>
   </div>
