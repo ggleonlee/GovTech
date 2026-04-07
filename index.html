@@ -240,8 +240,8 @@ em{font-style:italic}
 .constellation-section{background:#071830;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:0;padding:40px 24px}
 .constellation-inner{max-width:1120px;margin:0 auto;padding:0 28px}
 .constellation-section .section-label{color:#ffffff;margin-bottom:20px}
-.const-intro{font-size:15px;color:rgba(232,236,245,0.85);font-weight:300;line-height:1.75;margin-bottom:16px;max-width:580px}
-.constellation-field{position:relative;width:100%;aspect-ratio:2.2/1;min-height:104px;max-height:130px;margin-bottom:32px;cursor:crosshair}
+.const-intro{font-size:15px;color:rgba(232,236,245,0.85);font-weight:300;line-height:1.75;margin-bottom:24px;max-width:580px}
+.constellation-field{position:relative;width:100%;aspect-ratio:2.2/1;min-height:104px;max-height:130px;margin-bottom:0;cursor:crosshair}
 /* Star tiers */
 .star{position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(232,121,58,0.45);transition:all 0.8s cubic-bezier(0.22,1,0.36,1);cursor:default;z-index:2}
 .star.ember{width:8px;height:8px;background:rgba(232,121,58,0.45);box-shadow:none}
@@ -256,7 +256,7 @@ em{font-style:italic}
 .star:hover .star-tip{display:block}
 .ambient-dot{position:absolute;width:2px;height:2px;border-radius:50%;background:rgba(160,190,255,0.04);z-index:1}
 /* Pattern selector */
-.pattern-selector{display:flex;flex-direction:row;margin-bottom:24px;border-top:1px solid rgba(232,236,245,0.08);align-items:flex-start}
+.pattern-selector{display:flex;flex-direction:row;margin-top:24px;margin-bottom:24px;border-top:1px solid rgba(232,236,245,0.08);align-items:flex-start}
 .pattern-col{flex:1;display:flex;flex-direction:column;border-right:1px solid rgba(232,236,245,0.08)}
 .pattern-col:last-of-type{border-right:none}
 .pattern-btn{background:none;border:none;border-bottom:1px solid rgba(232,236,245,0.08);padding:16px 12px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--sans);transition:all 0.3s;-webkit-tap-highlight-color:transparent;width:100%}
@@ -821,16 +821,16 @@ function carouselSet(c, idx) {
     {id:'landaluce',name:'Estefania Landaluce',title:'Strategy / Service Design / Research',org:'Collaborator',city:'Spain',patterns:['elevate']}
   ];
   var positionsDesktop=[
-    {x:12,y:12},{x:28,y:7},{x:45,y:4},{x:62,y:9},{x:78,y:5},
-    {x:8,y:29},{x:22,y:24},{x:38,y:21},{x:55,y:25},{x:72,y:19},
-    {x:88,y:23},{x:15,y:41},{x:32,y:37},{x:48,y:40},{x:65,y:34},
-    {x:82,y:38},{x:92,y:31},{x:5,y:48},{x:42,y:49},{x:70,y:46}
+    {x:12,y:12},{x:28,y:8},{x:45,y:14},{x:62,y:10},{x:78,y:16},
+    {x:8,y:32},{x:22,y:38},{x:38,y:30},{x:55,y:35},{x:72,y:28},
+    {x:88,y:56},{x:15,y:62},{x:32,y:54},{x:48,y:60},{x:65,y:52},
+    {x:82,y:78},{x:92,y:72},{x:5,y:82},{x:42,y:88},{x:70,y:76}
   ];
   var positionsMobile=[
-    {x:12,y:10},{x:28,y:6},{x:45,y:3},{x:62,y:7},{x:78,y:4},
-    {x:8,y:24},{x:22,y:20},{x:38,y:17},{x:55,y:21},{x:72,y:16},
-    {x:88,y:19},{x:15,y:34},{x:32,y:31},{x:48,y:33},{x:65,y:28},
-    {x:82,y:32},{x:92,y:26},{x:5,y:40},{x:42,y:41},{x:70,y:38}
+    {x:12,y:12},{x:30,y:8},{x:48,y:14},{x:65,y:10},{x:82,y:16},
+    {x:6,y:32},{x:22,y:38},{x:40,y:30},{x:57,y:35},{x:74,y:29},
+    {x:16,y:56},{x:35,y:62},{x:52,y:54},{x:70,y:60},{x:88,y:52},
+    {x:8,y:78},{x:26,y:85},{x:44,y:74},{x:62,y:82},{x:80,y:88}
   ];
   var isMobile=window.matchMedia('(max-width:640px)').matches;
   var positions=isMobile?positionsMobile:positionsDesktop;
