@@ -150,6 +150,7 @@ em{font-style:italic}
 
 .mob-label{display:none}
 .desk-label{display:inline}
+br.mob-br{display:none}
 /* ── MOBILE ── */
 @media(max-width:680px){
   /* Nav */
@@ -213,6 +214,7 @@ em{font-style:italic}
   .section-wrap{padding:0 24px}
   .profile-why{padding:48px 24px 40px}
   .profile-headline{white-space:normal;width:auto;position:static;left:auto;transform:none;font-size:clamp(28px,9vw,40px)}
+  br.mob-br{display:inline}
   .profile-lead{font-size:15px}
   .profile-why .read-more-body p{font-size:15px}
   .contact-line{font-size:12px;flex-wrap:wrap;gap:4px 0}
@@ -325,7 +327,7 @@ em{font-style:italic}
 <div class="profile-block fade-in visible" id="why">
   <div class="profile-why">
     <div class="profile-pill">Change &amp; Transformation Lead — GovTech</div>
-    <h1 class="profile-headline">Why I want to be part of it.</h1>
+    <h1 class="profile-headline">Why I want to be<br class="mob-br"> part of it.</h1>
     <p class="profile-lead">Embedding inside agencies, diagnosing what is actually blocking modernisation, and building the conditions for change to last — is what I have spent the last ten years doing.</p>
     <p class="profile-lead profile-lead--strong">Not as a consultant who delivers recommendations and leaves, but as someone who stays until the system can run without me.</p>
 
